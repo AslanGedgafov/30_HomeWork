@@ -1,0 +1,40 @@
+1) Посмотреть где я (pwd)
+2) Создать папку (mkdir foldarName)
+3) Зайти в папку (cd folderName)
+4) Создать 3 папки (mkdir falderName1 falderName2 falderName3)
+5) Зайти в любоую папку (cd path to directory)
+6) Создать 5 файлов (3 txt, 2 json) (touch name.txt name1.txt name2.txt name.json name1.json)
+7) Создать 3 папки
+8. Вывести список содержимого папки (ls -la)
+9) + Открыть любой txt файл (cat fileName)
+10) + написать туда что-нибудь, любой текст. (cat > fileName) or (vim fileName)
+11) + сохранить и выйти. (Ctrl + C) or (:wq)
+12) Выйти из папки на уровень выше (cd ..)
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. (mv fileName.* fileName.* folderName/)
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. (cp fileName.* fileName.* folderName/)
+
+15) Найти файл по имени (find -name 'fileName')
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+17) вывести несколько первых строк из текстового файла (head -n* fileName)
+18) вывести несколько последних строк из текстового файла (tail -n* fileName)
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает. (less (options) fileName)
+20) вывести дату и время (date)
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request  (curl -X GET http://162.55.220.72:5005/terminal-hw-request)
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+я создам файл с расширением .sh (fileName.sh) с этим содержимым в нем
+
+cd /c/30_qa_group
+mkdir Name1 Name2 Name3
+cd /c/30_qa_group/Name2
+touch name.txt name1.txt name2.txt name.json name1.json
+mkdir zart
+ls -la 
+mv name.txt name1.txt zart/
+
+а затем я выполню команду (bash fileName.sh) в терминале, который запустит мой скрипт

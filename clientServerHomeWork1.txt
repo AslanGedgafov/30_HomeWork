@@ -1,0 +1,163 @@
+
+HW Client_Server
+
+1) Прочиать про клиент-серверную архитектуру
+	*The client/user uses their web browser to enter the URL of website they want
+	*The browser asks the Domain Name System(DNS-server) for an IP address
+	*Tne DNS server finds the desired server's IP address and sends it on the web browser
+	*The browser creates either an HTTPS or HTTP request
+	*The server/producer sends the user the correct files
+	*The client/user receives the files sent by the server, and the process is repeated as needed
+
+2) Что ткое HTTP и HTTPS - (Hyper Text Transfer Protocol (Secure)) this is a protocol that allow to get some data(HTML,CSS,Json,jpeg documents/data)
+   *HTTP protocol is the foundation of data exchange in the enternet 
+   *HTTP is a client server comunication protocol
+   *HTTP doesent have a state, it have a session, coocky let use session to transfer state
+
+    HTTP works as a request-response protocol between a client and server.
+	HTTP request / response
+	1. Client (browser) sends an HTTP requet to the web 
+	2. Web server receives the request
+	3. Server runs an application to process the request
+	4. Server returns an HTTP response (output) to the browser
+	5. Client (browser) receive the response
+
+	Typical HTTP request circle
+	1. Browser requests an HTML page, server returns HTML file
+	2. Browser request Stile Sheet, server returns CSS file
+	3. Browser request an JPG image, server returns JPG file
+	4. Browser request JavaScript code, server returns JS file
+	5. Browser request data, server returns data in XML or JSON files
+
+ 3) HTTP методы
+	GET
+	POST
+	PUT - same as Post but Idempotent (not create the same resourse if user call the same PUT request)
+	HEAD - same as GET but withour response body
+	DELETE
+	PATCH - uses to apply partial modifications to a resours
+	OPTIONS
+	CONNECT
+	TRACE
+	Most common are GET and POST
+	
+	-GET - used to request data frome specified resource. Query string will be set in URL of a GET request
+		(/test/demo_form.php?name1=value1&name2=value2)
+	*GET request can be cached 
+	*GET request remain in the browser history
+	*GET request can be bookmarked
+	*GET request newer use to transfer sensitive data
+	*GET request have length restriction
+	*GET request only ASCII character allowed
+	*GET request are only used to request data (not modify)
+
+	-POST - used to send data to a server to create/update a resource.
+		Data sent to server with POST is stored in the request body of the HTTP request
+	*POST request are never cached
+	*POST request do not remain in the browser history
+	*POST request cannot be bookmarked
+	*POST request have no restrictions on data length
+	*POST request no restrictions on Data Type
+
+4) HTTP статус коды сервера
+	1xx Informational
+	100 - continue
+
+	2xx Success
+	200 - Ok, 201-Created, 204-No content, 206-Partial content
+
+	3xx Redirection
+	300-Multiple choises, 301-Moved permanently, 302-Found under differ URL
+
+	4xx Client error
+	400-Bad request, 401-Unautorized, 403-Forbidden, 404-Not found, 405-Method not allowed, 409-Conflict, 415-Unsupported media type 
+	
+	5xx Server error
+	500-Internal server error, 502-Bad gateway, 503-Service unavaliable, 504-Gateway timeout
+
+
+5) Что такое ядро браузера 
+	A web browser engine(core) is a core software component of every major web browser, combines structure and stile together to draw the web page on your screen, 
+	and figure out which bit of it are interactive
+
+6) Какие браузеры какиие ядра используют
+	* Google Chrome & Opera v.15+  : Blink
+	* Internet Explorer            : Trident
+	* Mozilla Firefox              : Gecko
+	* Chrome for iOS and Safari    : WebKit
+
+7) Что такое API
+	Aplication Programming Interface (API) - is a software interface that allow two applications interact with each oter without any user intervention,
+	API is a collection of software functions and procedures, In simple terms, API means a software code that can be accessed or executed. 
+	API is defined as a code that helps two different software's to communicate and exchange data with each other.
+	
+	Types of API:
+	Open APIs: publicly avaliable to users Public APIs
+	Partner APIs: Specific rights or licenses access (not avaliable to the public)
+	Internal APIs: or privet, interna, companies APIs to make work more productive
+	Composite APIs: combines different data and service APIs
+
+	Server side APIs & Client side APIs
+	1.Server-side web APIs is a programatic interface that consist of one or 
+	    more publicly exposed endpoints to a defined request_response message system.(typically expressed in Json or XML)
+	2.Client-side web APIs is a programmatic interface helps to extend functionality within a web browser or oter HTTP client.
+
+
+8. Что такое ендпоинты
+	Api endpoint is one end of a comunication channel. When API interacts with another system, the touchpoints of this comminication are considered as Endpoints.
+	For APIs an andpoint can include a URL of a server or service. Each endpoint is the location from which APIs can access the resources they need to carry out their function.
+	
+	APIs work using 'requests' & 'responses'. When an API request information fron a web application or web server, it will receive a response.
+	The place where APIs send a requests and where the resource lives, is called an endpoint.
+ 
+9) URL (URI, URL, URN)
+	URL - Uniform Resource Location (address) - is a string that denotes the location of a given resource on the internet (web page, picture, a mailbox)
+	_example: https://162.55.220.72:5005/user_info_3?name=jon&age=25#samples  (https or http -it is called Scheme)(162.55.220.72 or google.com - IP address or Domain name)
+		(5005 - port name(usualli it is omitted(by default)))(user_info_3 -path to the sourse on the hosting server)(name=jon&age=25 - parameters that could be given to a server)
+		(#samples - Anchor or Fragment - represent specific part inside the resource)
+	URI - Uniform Resource Identifier - it is used for simply identify and locate a resource
+	URN - Uniforn Resorce Name it is used to identify a resource | urn:<NAMESPACE-IDENTIFIER>:<NAMESPACE-SPECIFIC-STRING>
+
+10) Идемпотентные HTTP методы
+	Idempotent HTTP method - is a method that can be invoked many times without the different outcomes.
+	GET,HEAD, OPTIONS, TRACE, PUT, DELETE
+
+11) Безопасные HTTP методы
+	Safe HTTP Method is safe if iit doesen't alter the state of the server. Method is safe if it is Read Only Method 
+	Those methods are GET, HEAD, or OPTIONS
+
+12) Иденфикация, Аутентификация, Авторизация
+	Identification - is the claim of a subject of its identity
+	Authentication - is the proof of identity that is achived through providing credentials to the access control mechanism
+	Authorization - is the mechanism that determines the access level(s) of the subject to the object
+
+13) Что такое IP
+	IP - Internet Protocol - is the set of rules governing the format of data sent via the internet or local network
+	IP address - is a unick address that identifies a device on the internet or a local network
+
+14) Что такое октаты в DNS
+	Octet represent 8-bit quantity (Octet = Byte in this case)
+	Octets range in math value from 0 to 255
+	Octet string in IP addresses consist of four octets [octet].[octet].[octet].[octet] - 192.168.0.1
+
+15) Что такое порт, сколько портов у Linux сервера
+	Port - is an addressable network location implemented in an operating system to help differentiate 
+		traffic destened for different services or applications
+	There are 65,535 possible port numbers
+
+16) Уровни OSI
+	7 Application Layer - Human-computer interaction layer, where applications can access the network services
+	6 Presentation Layer - Ensure thet data is in a usible format and is where data encryption occures 
+	5 Session Layer - Maintain connections and is responsible for controlling ports and sessions
+	4 Transport Layer - Transmit data using transmition protocols TCP & UDP
+	3 Network Layer - Decides which phisical path the data will take
+	2 Datalink Layer - Defines the format of dataon the network
+	1 Physical Layer - Transmit raw bit stream over the physical medium
+
+
+17) Хееры http запросов
+	Request Headers - is an HTTP Header thar can be used in an HTTP request to provide information about the request context, so thet the server
+	can tailor the ersponse. Example: Accept-* headers indicate the allowed and preferred formats of response. 
+	Response Headers - hold additional information about the responce, like it's lokation or about the server providing it
+	Representation Headers - comtain information about the body of the resourse, like its MIME type, or encoding/compression applied.
+	Payload Headers - contain representation_independent information about payload data, including content length and encoding used for transport. 

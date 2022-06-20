@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "1cf6d1f0-a4ba-4f81-9063-aa301df30f84",
+		"name": "30_group",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}get_method?age=30&name={{$randomFirstName}}",
+					"host": [
+						"{{baseURL}}get_method"
+					],
+					"query": [
+						{
+							"key": "age",
+							"value": "30"
+						},
+						{
+							"key": "name",
+							"value": "{{$randomFirstName}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "{{$randomFirstName}}",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "3000",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}user_info_3",
+					"host": [
+						"{{baseURL}}user_info_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Object Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}object_info_1?name={{$randomFullName}}&age=30&weight=80",
+					"host": [
+						"{{baseURL}}object_info_1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{$randomFullName}}"
+						},
+						{
+							"key": "age",
+							"value": "30"
+						},
+						{
+							"key": "weight",
+							"value": "80"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Object Info 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}object_info_2?name={{$randomFullName}}&age=30&salary=80000",
+					"host": [
+						"{{baseURL}}object_info_2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{$randomFullName}}"
+						},
+						{
+							"key": "age",
+							"value": "30"
+						},
+						{
+							"key": "salary",
+							"value": "80000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Object Info 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}object_info_3?name={{$randomFullName}}&age=30&salary=80000",
+					"host": [
+						"{{baseURL}}object_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{$randomFullName}}"
+						},
+						{
+							"key": "age",
+							"value": "30"
+						},
+						{
+							"key": "salary",
+							"value": "80000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Object Info 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}object_info_4?name={{$randomFullName}}&age=30&salary=80000",
+					"host": [
+						"{{baseURL}}object_info_4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{$randomFullName}}"
+						},
+						{
+							"key": "age",
+							"value": "30"
+						},
+						{
+							"key": "salary",
+							"value": "80000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Info 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "{{$randomFullName}}",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "80000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}user_info_2",
+					"host": [
+						"{{baseURL}}user_info_2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
